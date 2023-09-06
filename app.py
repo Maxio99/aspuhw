@@ -10,14 +10,14 @@ app = Flask(__name__)
 def get_image():
     try:
         image_file = request.files['image']
-        filename = werkzeug.utils.secure_filename(image_file.filename)
-        file_path = "./uploaded/" + filename
-        print("\nReceived image File name : " + image_file.filename)
+        # filename = werkzeug.utils.secure_filename(image_file.filename)
+        # file_path = "./uploaded/" + filename
+        # print("\nReceived image File name : " + image_file.filename)
         # TODO : Process the image and color it
     except Exception:
         return "Failed"
     print("\n Image Sent : testing.png")
-    return send_file(path_or_file='./uploaded_images/testing.png', mimetype='image/png')
+    return send_file(path_or_file='./uploaded/testing.png', mimetype='image/png')
 
 
 if __name__ == "__main__":
