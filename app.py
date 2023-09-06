@@ -17,7 +17,7 @@ def get_image():
     except Exception:
         return "Failed"
     print("\n Image Sent : testing.png")
-    return send_file(path_or_file='/uploaded/testing2.jpg', mimetype='image/png')
+    return send_file(path_or_file='/uploaded/testing2.jpg', mimetype='image/jpg')
 
 
 if __name__ == "__main__":
